@@ -2,51 +2,92 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-header {
-  background-color: #5a71bb;
+body{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  background: #E1F4E7;
+  font-style: 500;
+}
+
+h1{
   text-align: center;
-  color: white;
-  padding: 20px 0;
 }
 
-.lista-cadastro{
+.cadastro{
   display: flex;
-  margin: 20px 0;
-  padding:0 20px;
+  margin-top: 60px;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 40px;
 }
 
-.lista-cadastro input[type=text]{
-  flex: 1;
-  height: 40px;
-  padding-left: 20px;
-}
-
-.lista-produto-single{
-  padding:10px 0;
-  margin: 20px 0;
-  border-bottom: 1px solid #ccc;
+.cadastro div{
   display: flex;
+  flex-direction: column;
 }
 
-.lista-produto-single h3{
-  flex: 1;
-  padding: 0 20px;
+.cadastro div label{
+  font-size: 20px;
 }
 
-h3.price-produto{
-  text-align: right;
-  font-size: 17px;
+.cadastro div input{
+  border-radius: 8px;
+  padding: 10px;
+  background: #D9D9D9;
+  border-style: none;
+  margin-top: 8px;
 }
 
-h3.price-produto > span {
-  background-color: #5a71bb;
-  padding: 8px 10px;
-  border-radius: 20px;
-  color: white;
+.produto-input input{
+  width: 270px;
 }
 
-.soma-produto{
-  margin: 20px;
+.valor-input input{
+  width: 100px;
+}
+
+.btn-empt{
+  border-style: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+ul{
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+ul li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.produto-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #D9D9D9;
+  border-radius: 8px;
+  margin-right: 12px;
+  width: 382px;
+}
+
+
+.footer{
+  display: flex;
+  gap: 52px;
+}
+
+.footer h2{
+  min-width: 180px;
 }

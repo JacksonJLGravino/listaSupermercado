@@ -4,31 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Lista de Supermercado</title>
   </head>
   <body>
     <header>
-      <h2>App Lista de SuperMercado</h2>
+      <h1>Lista de compras</h1>
     </header>
-    <div class="lista-cadastro">
-      <input type="text" placeholder="nome do produto" name="nome_produto" />
-      <input
-        type="number"
-        placeholder="valor do produto"
-        name="price"
-        step="0.01"
-      />
-      <input type="submit" name="acao" value="Cadastrar" />
-    </div>
+    <main>
+      <section class="cadastro">
+        <div class="produto-input">
+          <label for="">Produto</label>
+          <input type="text" id="produto" />
+        </div>
+        <div class="valor-input">
+          <label for="">Valor</label>
+          <input type="number" step="0.01" id="valor" />
+        </div>
+        <button class="btn-empt" id="btnAddProduto">
+          <img src="./src/check.svg" alt="" />
+        </button>
+      </section>
 
-    <div class="lista-produtos"></div>
+      <section class="lista" id="lista">
+        <ul id="listaProduto"></ul>
 
-    <div class="soma-produto">
-      <h1>Total: R$0</h1>
-    </div>
+        <section class="footer">
+          <h2 id="total">Total: R$ 0</h2>
+          <button class="btn-empt">
+            <img src="./src/pdf.svg" alt="" onclick="baixar()" />
+          </button>
+          <button class="btn-empt">
+            <img src="./src/trash.svg" alt="" onclick="deletarTudo()" />
+          </button>
+        </section>
+      </section>
+    </main>
 
-    <button name="limpar">Limpar</button>
     <script src="main.js"></script>
   </body>
 </html>
